@@ -79,6 +79,7 @@ body {
 
 .heading-primary {
   color: var(--color-white);
+  backface-visibility: hidden;
 }
 
 .heading-primary-main {
