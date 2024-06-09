@@ -145,6 +145,33 @@ body {
   animation: maveInRight 1s ease-out;
 }
 
+.heading-secondary {
+  font-size: 3.5rem;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color:transparent;
+  letter-spacing: .1rem;
+  transition: all .2s;
+}
+
+.heading-secondary:hover {
+  transform: skew(15deg, 2deg) scale(1.1);
+  text-shadow: .5rem 1rem 2rem rgba(0, 0, 0, .2);
+}
+
+
+
+/* ================================ *\
+  Utilities
+\* ================================ */
+
+.u-center-text {
+  text-align: center;
+}
+
 
 
 /* ================================ *\
@@ -241,4 +268,10 @@ body {
 /* ================================ *\
   Home Page
 \* ================================ */
+
+.section-about {
+  background-color: var(--color-grey-light-1);
+  padding: 18rem 6rem;
+  margin-top: -20vh;
+}
 
