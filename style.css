@@ -38,6 +38,10 @@
   --color-black: #000;
 }
 
+/* Font */
+:root {
+  --defult-font-size: 1.6rem;
+}
 
 
 /* ================================ *\
@@ -162,15 +166,31 @@ body {
   text-shadow: .5rem 1rem 2rem rgba(0, 0, 0, .2);
 }
 
+.heading-tertiary {
+  font-size: var(--defult-font-size);
+  font-weight: 700;
+}
+
+.paragraph {
+  font-size: var(--defult-font-size);
+
+}
+
+.paragraph:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
 
 
 /* ================================ *\
   Utilities
 \* ================================ */
 
-.u-center-text {
-  text-align: center;
-}
+.u-center-text { text-align: center; }
+
+.u-margin-bottom-big { margin-bottom: 8rem; }
+.u-margin-bottom-medium { margin-bottom: 4rem; }
+.u-margin-bottom-small { margin-bottom: 1.5rem; }
 
 
 
@@ -178,38 +198,7 @@ body {
   Components 
 \* ================================ */
 
-.header {
-  height: 95vh;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(126, 213, 111, 0.8),
-      rgba(40, 180, 133, 0.8)), 
-    url("../img/hero.jpg");
-  background-size: cover;
-  background-position: bottom;
-  position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
-
-.header__logo {
-  height: 3.5rem;
-}
-
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
+/* Button */
 .btn:link,
 .btn:visited {
   text-decoration: none;
@@ -261,6 +250,78 @@ body {
 .btn--animated {
   animation: maveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards;
+}
+
+.btn-text,
+.btn-text:link,
+.btn-text:visited {
+    font-size: var(--defult-font-size);
+    color: var(--color-primary);
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-primary);
+    padding: 3px;
+    transition: all .2s;
+}
+
+.btn-text:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .15);
+  transform: translateY(-2px);
+}
+
+.btn-text:active {
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+  transform: translateY(0);
+}
+
+
+
+/* ================================ *\
+  Layout
+\* ================================ */
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.8),
+      rgba(40, 180, 133, 0.8)), 
+    url("../img/hero.jpg");
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.header__logo {
+  height: 3.5rem;
+}
+
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.col {
+  width: 46%;
 }
 
 
