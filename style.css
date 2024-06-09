@@ -1,3 +1,7 @@
+/* ================================ *\
+  Fonts
+\* ================================ */
+
 @font-face {
   font-family: "shabnam";
   src: url("/font/shabnam.eot") format("eot"),
@@ -5,6 +9,13 @@
     url("/font/shabnam.ttf") format("truetype");
 }
 
+
+
+/* ================================ *\
+  CSS Variables
+\* ================================ */
+
+/* Colors */
 :root {
   --color-primary: #55c57a;
   --color-primary-light: #7ed56f;
@@ -27,78 +38,39 @@
   --color-black: #000;
 }
 
+
+
+/* ================================ *\
+  Base
+\* ================================ */
+
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; 
 }
 
 html {
-  font-size: 62.5%;
+  /* defult font-size is 16px = 100% */
+  font-size: 62.5%; /* equal to 10 px = 1rem */
 }
 
 body {
-  font-family: shabnam, "Segoe UI", Tahoma, sans-serif;
-  font-weight: 400;
-  line-height: 1.7;
-  color: var(--color-grey-dark);
   padding: 3rem;
 }
 
-.header {
-  height: 95vh;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(126, 213, 111, 0.8),
-      rgba(40, 180, 133, 0.8)), 
-    url("../img/hero.jpg");
-  background-size: cover;
-  background-position: bottom;
-  position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
-
-.header__logo {
-  height: 3.5rem;
-}
-
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.heading-primary {
+::selection {
+  background-color: var(--color-primary);
   color: var(--color-white);
-  backface-visibility: hidden;
-  margin-bottom: 6rem;
 }
 
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  animation: maveInLeft 1s ease-out;
-}
 
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 400;
-  word-spacing: 1.6rem;
-  animation: maveInRight 1s ease-out;
-}
+
+/* ================================ *\
+  Animations
+\* ================================ */
 
 @keyframes maveInLeft {
   0% {
@@ -137,6 +109,78 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+
+
+/* ================================ *\
+  Typography
+\* ================================ */
+
+body {
+  font-family: shabnam, "Segoe UI", Tahoma, sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--color-grey-dark);
+}
+
+.heading-primary {
+  color: var(--color-white);
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+}
+
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  animation: maveInLeft 1s ease-out;
+}
+
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 400;
+  word-spacing: 1.6rem;
+  animation: maveInRight 1s ease-out;
+}
+
+
+
+/* ================================ *\
+  Components 
+\* ================================ */
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.8),
+      rgba(40, 180, 133, 0.8)), 
+    url("../img/hero.jpg");
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.header__logo {
+  height: 3.5rem;
+}
+
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .btn:link,
@@ -191,3 +235,10 @@ body {
   animation: maveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards;
 }
+
+
+
+/* ================================ *\
+  Home Page
+\* ================================ */
+
