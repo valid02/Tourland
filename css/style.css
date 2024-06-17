@@ -1139,6 +1139,7 @@ body {
 
 /* Tablet landscape */
 @media (max-width: 75em) {
+  /* Base */
   html {
     font-size: 56.25%;
   }
@@ -1147,14 +1148,42 @@ body {
 
 /* Tablet portrait */
 @media (max-width: 56.25em) {
+  /* Base */
   html {
     font-size: 50%;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  /* Typography */
+  .heading-secondary {
+    font-size: 3rem;
+  }
+}
+
+
+/* Phone */
+@media (max-width: 37.5em) {
+  /* Typography */
+  .heading-primary--main {
+    font-size: 5rem;
+  }
+
+  .heading-primary--sub {
+    word-spacing: .5rem;
+  }
+
+  .heading-secondary {
+    font-size: 2.5rem;
   }
 }
 
 
 /* Big desktop */
 @media (min-width: 112.5em) {
+  /* Base */
   html {
     font-size: 75%;
   }
