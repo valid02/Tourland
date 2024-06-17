@@ -44,6 +44,7 @@
 }
 
 
+
 /* ================================ *\
   Base
 \* ================================ */
@@ -1119,4 +1120,42 @@ body {
 .book__form {
   width: 50%;
   padding: 6rem;
+}
+
+
+
+
+/* MEDIA QUERY */
+/*
+0 - 600px (37.5em):     phone
+600 - 900px (56.25em):   Tablet portrait
+900 - 1200px (75em):  Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px (112.5em) + :     Big desktop
+
+(1em = 16px)
+*/
+
+
+/* Tablet landscape */
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+
+/* Tablet portrait */
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+
+/* Big desktop */
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
 }
