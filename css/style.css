@@ -1161,6 +1161,12 @@ body {
   .heading-secondary {
     font-size: 3rem;
   }
+
+
+  /* Utilities */
+  .u-margin-bottom-medium {margin-bottom: 3rem !important; }
+
+  .u-margin-bottom-big {margin-bottom: 5rem !important; }
   
 
   /* Layout */
@@ -1171,18 +1177,15 @@ body {
     max-width: 50rem;
   }
   
-  .col-1-of-2 {
-    width: 100%;
-    margin-bottom: 6rem;
-  }
-  
+  .col-1-of-2, 
+  .col-1-of-3,
   .col-1-of-4 {
     width: 100%;
-    margin-bottom: 6rem;
   }
   
-  .col-1-of-3 {
-    width: 100%;
+  .col-1-of-2:not(:last-child),
+  .col-1-of-3:not(:last-child),
+  .col-1-of-4:not(:last-child) {
     margin-bottom: 6rem;
   }
 
@@ -1213,6 +1216,28 @@ body {
 
   .footer__logo-box {
     margin-bottom: 6rem;
+  }
+
+
+  /* Home page */
+  .section-about {
+    padding: 16rem 2rem;
+  }
+
+  .section-features {
+    padding: 15rem 3rem;
+  }
+
+  .section-tours {
+    padding: 20rem 3rem 10rem 3rem;
+  }
+
+  .section-stories {
+    padding: 10rem 0;
+  }
+
+  .section-book {
+    padding: 10rem 0;
   }
 }
 
