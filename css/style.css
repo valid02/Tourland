@@ -1225,7 +1225,7 @@ body {
   }
 
   .section-features {
-    padding: 15rem 3rem;
+    padding: 10rem 3rem;
   }
 
   .section-tours {
@@ -1238,6 +1238,46 @@ body {
 
   .section-book {
     padding: 10rem 0;
+  }
+
+
+  /* Components */
+  .composition {
+    display: flex;
+    flex-direction: row;
+    margin: 4rem 0;
+  }
+
+  .composition__photo {
+    width: 33.333333333%;
+    position: relative;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, .2);
+  }
+
+  .composition__photo--p1 {
+    top: 0;
+    transform: scale(1.2);
+  }
+
+  .composition__photo--p2 {
+    top: -1rem;
+    transform: scale(1.3);
+    z-index: 100;
+  } 
+
+  .composition__photo--p3 {
+    top: 1rem;
+    left: 0;
+    transform: scale(1.1);
+  }
+
+
+  .feature-box {
+    padding: 2rem;
+  }
+
+  .feature-box__icon {
+    margin-bottom: 0;
   }
 }
 
