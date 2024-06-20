@@ -542,7 +542,6 @@ body {
   background-color: rgba(255, 255, 255, .6);
   border-radius: 3px;
   padding: 6rem;
-  padding-right: 9rem;
   font-size: var(--defult-font-size);
   transform: skewX(-12deg);
 }
@@ -1143,6 +1142,21 @@ body {
   html {
     font-size: 56.25%;
   }
+
+
+  /* Components */
+  .book {
+    background-image: linear-gradient(-75deg,
+      rgba(255, 255, 255, .9) 0%,
+      rgba(255, 255, 255, .9) 65%,
+      transparent 65%),
+    url("../img/nat-10.jpg");
+    background-size: cover;
+  }
+
+  .book__form {
+    width: 65%;
+  }
 }
 
 
@@ -1279,6 +1293,70 @@ body {
   .feature-box__icon {
     margin-bottom: 0;
   }
+
+
+  .card {
+    height: auto;
+    border-radius: 3px;
+    background-color: var(--color-white);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .15);
+  }
+  
+  .card__side {
+    height: auto;
+    position: relative;
+    box-shadow: none;
+  }
+      
+  .card__side--back {
+    transform: rotateY(0);
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+  }
+    
+  .card:hover .card__side--front {
+    transform: rotateY(0);
+  }
+
+  .card__details {
+    padding: 1rem 3rem;
+  }
+  
+  /* BACK SIDE STYLING */
+  .card__cta {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0);
+    width: 100%;
+    padding: 7rem 4rem 4rem 4rem;
+  }
+  
+  .card__price-box {
+    margin-bottom: 3rem;
+  }
+  
+  .card__price-value, .card__price-currency {
+    font-size: 3.5rem;
+  }
+
+
+  .story {
+    padding: 4rem;
+  }
+
+
+  .book {
+    background-image: linear-gradient(to right,
+      rgba(255, 255, 255, .9) 0%,
+      rgba(255, 255, 255, .9) 100%),
+    url("../img/nat-10.jpg");
+    width: 70%;
+  }
+
+  .book__form {
+    width: 100%;
+    padding: 4rem;
+  }
 }
 
 
@@ -1311,6 +1389,35 @@ body {
   .navigation__background {
     top: 3.5rem;
     right: 3.5rem;
+  }
+
+
+  /* Components */
+  .story {
+    transform: skewX(0);
+    padding: 3rem;
+  }
+
+  .story__shape {
+    transform: translateX(-1rem) skewX(0);
+  }
+
+  .story__text {
+    transform: translateX(-1rem) skewX(0);
+  }
+
+
+  .book {
+    width: 90%;
+  }
+
+  .form__radio-group {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .form__input {
+    width: 100%;
   }
 }
 
