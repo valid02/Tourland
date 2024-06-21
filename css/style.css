@@ -1137,7 +1137,7 @@ body {
 
 
 /* Tablet landscape */
-@media (max-width: 75em) {
+@media only screen and (max-width: 75em) {
   /* Base */
   html {
     font-size: 56.25%;
@@ -1161,7 +1161,7 @@ body {
 
 
 /* Tablet portrait */
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   /* Base */
   html {
     font-size: 50%;
@@ -1295,6 +1295,27 @@ body {
   }
 
 
+  .story {
+    padding: 4rem;
+  }
+
+
+  .book {
+    background-image: linear-gradient(to right,
+      rgba(255, 255, 255, .9) 0%,
+      rgba(255, 255, 255, .9) 100%),
+    url("../img/nat-10.jpg");
+    width: 70%;
+  }
+
+  .book__form {
+    width: 100%;
+    padding: 4rem;
+  }
+}
+
+@media only screen and (max-width: 56.25em),
+only screen and (hover: none) {
   .card {
     height: auto;
     border-radius: 3px;
@@ -1338,30 +1359,11 @@ body {
   .card__price-value, .card__price-currency {
     font-size: 3.5rem;
   }
-
-
-  .story {
-    padding: 4rem;
-  }
-
-
-  .book {
-    background-image: linear-gradient(to right,
-      rgba(255, 255, 255, .9) 0%,
-      rgba(255, 255, 255, .9) 100%),
-    url("../img/nat-10.jpg");
-    width: 70%;
-  }
-
-  .book__form {
-    width: 100%;
-    padding: 4rem;
-  }
 }
 
 
 /* Phone */
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   /* Typography */
   .heading-primary--main {
     font-size: 5rem;
@@ -1423,7 +1425,7 @@ body {
 
 
 /* Big desktop */
-@media (min-width: 112.5em) {
+@media only screen and (min-width: 112.5em) {
   /* Base */
   html {
     font-size: 75%;
